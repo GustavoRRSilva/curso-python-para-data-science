@@ -1,4 +1,5 @@
 import random;
+import matplotlib.pyplot as plt;
 
 nome = 'Gustavo';
 print(nome)
@@ -59,8 +60,15 @@ for elemento in lista:
     print(f"o elemento {elemento} é do tipo: {type(elemento)}");
 
 listas = [];
-random.seed(1)#deixa o array  de forma unica sempre
+#random.seed(1) #deixa o array  de forma unica sempre
 for lista in range (4):
     listas.append(random.randrange(0,11))
-
 print(listas)
+x = list(range(1,5));#cria o eixo x da lista
+y = listas # cria o eixo y da lista
+
+plt.plot(x,y, marker = 'o'); # cria o grafico passando os parâmetros de x, y e o marcador com as bolinhas
+plt.title('Notas da Escola') # diz o titulo do gráfico
+plt.xlabel('Provas') # diz o nome do eixo x
+plt.ylabel('Notas') # diz o nome do eixo y
+plt.show() # mostra o gráfico
