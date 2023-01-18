@@ -1,3 +1,5 @@
+import random;
+
 nome = 'Gustavo';
 print(nome)
 idade = 18;
@@ -50,3 +52,15 @@ for idade in idades:
 
 for permissao in permissoes:
     print(permissao)
+
+#Tipos em uma lista
+lista = ['Gustavo', 28, True , '18'];
+for elemento in lista:
+    print(f"o elemento {elemento} é do tipo: {type(elemento)}");
+
+listas = [];
+random.seed(1)#deixa o array  de forma unica sempre
+for lista in range (4):
+    listas.append(random.randrange(0,11))
+
+print(listas)
